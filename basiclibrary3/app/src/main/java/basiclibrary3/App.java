@@ -3,11 +3,110 @@
  */
 package basiclibrary3;
 
+import java.util.ArrayList;
+
 public class App {
 
 
     public static void main(String[] args) {
-
-        System.out.println("hallo;");
+        int numroll = 6;
+        ArrayList<Integer> usetocheck = roll(numroll);
+        //second
+        int[] array = {1, 3, 5, 7, 4};
+        System.out.println(duplicates(array));
+        //third
+        int[] avrgarray = {1, 3, 5, 7, 4};
+        System.out.println(averages(avrgarray));
+        //four
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        System.out.println(avarageoftwoarray(weeklyMonthTemperatures));
     }
+
+    public static ArrayList<Integer> roll(int n) {
+        ArrayList<Integer> randomlist = new ArrayList<Integer>();
+
+        for (int i = 0; i < n; i++) {
+            int max = 6;
+            int min = 1;
+            int random = (int) (Math.random() * (max - min + 1) + min);
+            randomlist.add(random);
+
+        }
+        System.out.println(randomlist);
+        return randomlist;
+    }
+
+    public static boolean duplicates(int[] array) {
+        boolean checkdup = false;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    checkdup = true;
+                    break;
+                }
+
+            }
+        }
+        return checkdup;
+
+    }
+
+
+    public static double averages(int[] avrgarray) {
+        double checkdup =0;
+        int sum=0;
+        double average=0;
+        for (int i = 0; i < avrgarray.length; i++) {
+
+            sum= sum +avrgarray[i];
+        }
+        average=sum/avrgarray.length;
+        return  average;
+    }
+
+
+
+
+
+    public static double avarageoftwoarray(int[][] array) {
+        double sum=0;
+        int countlengh=0;
+        double lowestavarage=0;
+        double avg=0;
+        for (int j : array[0]){
+            sum+=j;
+        }
+        lowestavarage=sum/array[0].length;
+
+        System.out.println(lowestavarage);
+
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j:array[i]){
+                sum= sum +j;
+                countlengh=countlengh+1;
+            }
+            avg=sum/countlengh;
+            System.out.println(avg);
+            if (avg<lowestavarage){
+                lowestavarage=avg;
+            };
+            countlengh=0;
+            sum=0;
+
+        }
+
+
+
+
+        return lowestavarage;
+    }
+
+
 }
+
