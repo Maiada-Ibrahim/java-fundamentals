@@ -4,11 +4,39 @@
 package basiclibrary3;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+//    @Test void testroll() {
+//        App rolltest = new App();
+//        ArrayList<Integer> correctresulte= rolltest.roll(6);
+//        assertEquals([1, 2, 3, 3, 6, 2], correctresulte);
+//    }
+    @Test void testduplicates() {
+        App duplicatestest = new App();
+        int[] array = {1, 3, 5, 7, 4};
+        boolean correctresulte= duplicatestest. duplicates(array);
+        assertEquals(false, correctresulte);
     }
+    @Test void testaverages() {
+        App averagestest = new App();
+        int[] avrgarray = {1, 3, 5, 7, 4};
+        double correctresulte= averagestest.averages(avrgarray);
+        assertEquals(4.0, correctresulte);
+    }
+    @Test void testavarageoftwoarray() {
+        App avarageoftwoarraytest = new App();
+        int[][] weeklyMonthTemperatures = {
+                {66, 64, 58, 65, 71, 57, 60},
+                {57, 65, 65, 70, 72, 65, 51},
+                {55, 54, 60, 53, 59, 57, 61},
+                {65, 56, 55, 52, 55, 62, 57}
+        };
+        double correctresulte= avarageoftwoarraytest.avarageoftwoarray(weeklyMonthTemperatures);
+        assertEquals(57.0, correctresulte);
+    }
+
 }
