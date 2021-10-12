@@ -79,6 +79,7 @@ public class App {
         int countlengh=0;
         double lowestavarage=0;
         double avg=0;
+        int indexforlowestavg=0;
         for (int j : array[0]){
             sum+=j;
         }
@@ -95,7 +96,8 @@ public class App {
             avg=sum/countlengh;
             System.out.println(avg);
             if (avg<lowestavarage){
-                lowestavarage=avg;
+//                lowestavarage=avg;
+                 indexforlowestavg= i;
             };
             countlengh=0;
             sum=0;
@@ -105,7 +107,7 @@ public class App {
 
 
 
-        return lowestavarage;
+        return indexforlowestavg;
     }
 
 
