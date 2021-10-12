@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-//    @Test void testroll() {
-//        App rolltest = new App();
-//        ArrayList<Integer> correctresulte= rolltest.roll(6);
-//        assertEquals([1, 2, 3, 3, 6, 2], correctresulte);
-//    }
+    @Test void testroll() {
+        App rolltest = new App();
+        ArrayList<Integer> correctresulte= rolltest.roll(6);
+        assertEquals(6, correctresulte.size());
+    }
     @Test void testduplicates() {
         App duplicatestest = new App();
         int[] array = {1, 3, 5, 7, 4};
