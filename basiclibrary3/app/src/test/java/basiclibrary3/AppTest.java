@@ -35,8 +35,9 @@ class AppTest {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        double correctresulte= avarageoftwoarraytest.avarageoftwoarray(weeklyMonthTemperatures);
-        assertEquals(57.0, correctresulte);
+        int[] correctresulte= avarageoftwoarraytest.avarageoftwoarray(weeklyMonthTemperatures);
+        int[] expect={55, 54, 60, 53, 59, 57, 61};
+      assertArrayEquals(expect, correctresulte);
     }
 
 }

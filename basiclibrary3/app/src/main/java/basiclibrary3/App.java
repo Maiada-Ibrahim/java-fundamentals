@@ -4,6 +4,8 @@
 package basiclibrary3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 
 public class App {
 
@@ -24,7 +26,9 @@ public class App {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        System.out.println(avarageoftwoarray(weeklyMonthTemperatures));
+        System.out.println(Arrays.toString(avarageoftwoarray(weeklyMonthTemperatures)));
+        // lab2 first
+       System.out.println(weather(weeklyMonthTemperatures));
     }
 
     public static ArrayList<Integer> roll(int n) {
@@ -74,7 +78,7 @@ public class App {
 
 
 
-    public static double avarageoftwoarray(int[][] array) {
+    public static int[] avarageoftwoarray(int[][] array) {
         double sum=0;
         int countlengh=0;
         double lowestavarage=0;
@@ -96,7 +100,7 @@ public class App {
             avg=sum/countlengh;
             System.out.println(avg);
             if (avg<lowestavarage){
-//                lowestavarage=avg;
+                lowestavarage=avg;
                  indexforlowestavg= i;
             };
             countlengh=0;
@@ -104,12 +108,71 @@ public class App {
 
         }
 
+        System.out.println(indexforlowestavg);
+
+        return array[indexforlowestavg] ;
+    }
+
+    public static String weather(int[][] array) {
+        HashSet<Integer> weatherlist = new HashSet<Integer>();
+        int max = 0;
+        int min = array[0][0];
+        String output = "";
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                int x = array[i][j];
+                weatherlist.add(array[i][j]);
+//                weatherlist.add(9);
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                } else if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        System.out.println("High:" + max);
+        System.out.println("Low:" + min);
+        for (int i = min; i <= max; i++) {
 
 
 
-        return indexforlowestavg;
+                if (! weatherlist.contains(i)) {
+                    output+="\nNever saw temperature : " + i;
+//                    break;
+                }
+
+
+        }
+        return output;
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
 
