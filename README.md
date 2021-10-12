@@ -25,3 +25,20 @@ Start time: 2 pm
 Finish time: 5 pm
 
 Actual time needed to complete: 3.5 hour
+
+
+
+# lab-02 code [basiclibrary](https://github.com/Maiada-Ibrahim/java-fundamentals/blob/main/basiclibrary3/app/src/main/java/basiclibrary3/App.java)
+it's contain these method
+1. roll for Roll Dice
+2. duplicates for Contains Duplicates
+3. avg for Calculating Averages
+4. lowestAverage for Array of arrays
+
+Estimate of time needed to complete: 6 hour
+
+Start time: 1:30 pm
+
+Finish time: 7 pm
+
+Actual time needed to complete: 6.5 hour

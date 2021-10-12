@@ -59,13 +59,14 @@ public class App {
 
     public static double averages(int[] avrgarray) {
         double checkdup =0;
-        int sum=0;
+        double sum=0;
         double average=0;
         for (int i = 0; i < avrgarray.length; i++) {
 
             sum= sum +avrgarray[i];
         }
         average=sum/avrgarray.length;
+        System.out.println(sum);
         return  average;
     }
 
