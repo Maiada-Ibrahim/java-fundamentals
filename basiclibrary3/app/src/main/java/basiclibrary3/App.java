@@ -3,9 +3,7 @@
  */
 package basiclibrary3;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
+import java.util.*;
 
 public class App {
 
@@ -28,7 +26,19 @@ public class App {
         };
         System.out.println(Arrays.toString(avarageoftwoarray(weeklyMonthTemperatures)));
         // lab2 first
-       System.out.println(weather(weeklyMonthTemperatures));
+        System.out.println(weather(weeklyMonthTemperatures));
+        //lab2 sec
+        List<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+        System.out.println("winner is " + tally(votes));
     }
 
     public static ArrayList<Integer> roll(int n) {
@@ -62,55 +72,53 @@ public class App {
 
 
     public static double averages(int[] avrgarray) {
-        double checkdup =0;
-        double sum=0;
-        double average=0;
+        double checkdup = 0;
+        double sum = 0;
+        double average = 0;
         for (int i = 0; i < avrgarray.length; i++) {
 
-            sum= sum +avrgarray[i];
+            sum = sum + avrgarray[i];
         }
-        average=sum/avrgarray.length;
+        average = sum / avrgarray.length;
         System.out.println(sum);
-        return  average;
+        return average;
     }
 
 
-
-
-
     public static int[] avarageoftwoarray(int[][] array) {
-        double sum=0;
-        int countlengh=0;
-        double lowestavarage=0;
-        double avg=0;
-        int indexforlowestavg=0;
-        for (int j : array[0]){
-            sum+=j;
+        double sum = 0;
+        int countlengh = 0;
+        double lowestavarage = 0;
+        double avg = 0;
+        int indexforlowestavg = 0;
+        for (int j : array[0]) {
+            sum += j;
         }
-        lowestavarage=sum/array[0].length;
+        lowestavarage = sum / array[0].length;
 
         System.out.println(lowestavarage);
 
 
         for (int i = 0; i < array.length; i++) {
-            for (int j:array[i]){
-                sum= sum +j;
-                countlengh=countlengh+1;
+            for (int j : array[i]) {
+                sum = sum + j;
+                countlengh = countlengh + 1;
             }
-            avg=sum/countlengh;
+            avg = sum / countlengh;
             System.out.println(avg);
-            if (avg<lowestavarage){
-                lowestavarage=avg;
-                 indexforlowestavg= i;
-            };
-            countlengh=0;
-            sum=0;
+            if (avg < lowestavarage) {
+                lowestavarage = avg;
+                indexforlowestavg = i;
+            }
+            ;
+            countlengh = 0;
+            sum = 0;
 
         }
 
         System.out.println(indexforlowestavg);
 
-        return array[indexforlowestavg] ;
+        return array[indexforlowestavg];
     }
 
     public static String weather(int[][] array) {
@@ -135,40 +143,45 @@ public class App {
         for (int i = min; i <= max; i++) {
 
 
-
-                if (! weatherlist.contains(i)) {
-                    output+="\nNever saw temperature : " + i;
+            if (!weatherlist.contains(i)) {
+                output += "\nNever saw temperature : " + i;
 //                    break;
-                }
+            }
 
 
         }
         return output;
     }
 
+    public static String tally(List<String> votes) {
+        HashMap<String, Integer> listvote = new HashMap<String, Integer>();
+        int vote = 0;
+        for (String thename : votes) {
+            if (listvote.containsKey(thename)) {
+
+                vote = listvote.get(thename) + 1;
+                listvote.put(thename , vote);
+            }else {
+                listvote.put(thename,1);
+            }
 
 
+        }
+        System.out.println(listvote);
+        int max=0;
+        String winner="";
+                for(Map.Entry<String , Integer> entry : listvote.entrySet()){
+                    if (entry.getValue()>max){
+                        max=entry.getValue();
+                        winner=entry.getKey();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    }
+                }
+             return winner;
+    }
 
 
 }
-
-
-
 
 
 
