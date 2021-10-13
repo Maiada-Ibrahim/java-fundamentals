@@ -22,8 +22,13 @@ class LibraryTest {
     @Test void testduplicates() {
         Library duplicatestest = new Library();
         int[] array = {1, 3, 5, 7, 4};
+        int[] array1 = {1,1, 3, 5, 7, 4};
+
         boolean correctresulte= duplicatestest. duplicates(array);
         assertEquals(false, correctresulte);
+        boolean correctresulte1= duplicatestest. duplicates(array1);
+        assertEquals(true, correctresulte1);
+
     }
     @Test void testaverages() {
         Library averagestest = new Library();
