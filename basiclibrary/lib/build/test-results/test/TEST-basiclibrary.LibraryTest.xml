@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="basiclibrary.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-16T12:00:57" hostname="LTUCSTUDENT-L17" time="0.024">
+<testsuite name="basiclibrary.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-16T19:15:33" hostname="LTUCSTUDENT-L17" time="0.044">
   <properties/>
-  <testcase name="testtally()" classname="basiclibrary.LibraryTest" time="0.024"/>
+  <testcase name="testtally()" classname="basiclibrary.LibraryTest" time="0.044"/>
   <system-out><![CDATA[{Hedge=2, Bush=5, Shrub=2}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
