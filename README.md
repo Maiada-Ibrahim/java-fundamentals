@@ -66,7 +66,7 @@ Never saw temperature: 69
 Write a function called tally that accepts a List of Strings representing votes and returns one string to show what got the most votes.
 
 
- ## [File I/O, and Testing](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/linter)
+ ## [File I/O, and Testing](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/linter1)
 
 
 Estimate of time needed to complete:2 hour

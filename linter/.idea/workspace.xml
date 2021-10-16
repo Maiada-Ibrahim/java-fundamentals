@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b235fd2-d97e-48cf-904a-c241924ce074" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/resources/empty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/resources/fewerror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/resources/gates.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/resources/manyerror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/resources/noerror.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linter1/resources/oneerror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linter1/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../linter1/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linter1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../linter1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linter1/app/src/main/java/linter1/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../linter1/app/src/main/java/linter1/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../test/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +56,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="linter.App" />
       <module name="linter.app.main" />
       <extension name="coverage">
@@ -143,6 +160,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Gradle.AppTest" />
+      <item itemvalue="Gradle.AppTest.testempty" />
+      <item itemvalue="Gradle.AppTest.testofewerror" />
+      <item itemvalue="Gradle.AppTest.testomanyerror" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
