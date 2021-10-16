@@ -8,43 +8,40 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class App {
 
 
     public static void main(String[] args) {
-        checksemicolon("C:\\Users\\STUDENT\\project\\java-fundamentals\\linter\\resources\\gates.js");
+
+
+        System.out.println(checksemicolon("C:\\Users\\STUDENT\\project\\java-fundamentals\\linter\\resources\\gates.js"));
     }
-    public static void checksemicolon(String path) {
-        int numline=1;
+    public static String checksemicolon(String path) {
+        int numline=0;
+        String error = "";
+        Path mylistpath = Paths.get(path);
         try {
-            // initialize lines stream
-            Stream<String> stream = Files.lines(Paths.get(path));
+            List <String> filelist =Files.readAllLines(mylistpath);
+     for ( String line : filelist ){
+         numline=numline+1;
+         if(!line.isEmpty() ){
+             if (!(line.contains("{") || line.contains("}") ||line.contains("if") ||line.contains("else") || line.contains(";"))){
+                 error += "Line " + numline + ": Missing semicolon.\n" ;
+             }
+//             error="no error";
 
-            // apply filter & sorting
-            int currentLine = new Throwable().getStackTrace()[0].getLineNumber();
-
-            stream.filter(l -> ! (l.endsWith(";")||l.endsWith("{")||l.endsWith("}")||(l.contains("if"))||l.contains("else")||l.isEmpty()))
-
-                    .sorted()
-
-                    .map(String::toUpperCase)
-                    .forEach(l -> System.out.println("line"+ currentLine));
-
-             System.out.printf("There are %d even numbers in the stream %n", numline);
-//            int currentLine = new Throwable().getStackTrace()[0].getLineNumber();
-            System.out.println("The Current Line Number is " + currentLine);
-            // close the stream
-            stream.close();
+         }
+     }
 
         } catch (IOException ex) {
             ex.printStackTrace();
         }
-
+return error;
     }
 }
