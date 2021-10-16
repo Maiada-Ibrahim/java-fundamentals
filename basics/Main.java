@@ -32,15 +32,21 @@ clock();
 //--------------------------------------------------------------------------------------------------
 public static int flipNHeads (int n ) {
 int counflip=0;
-for(int i=0;i<n;i++){
-while(Math.random()<.5){
-counflip=counflip+1;
-System.out.println("tails");
-}
-counflip=counflip+1;
+int headcount=0;
+while (headcount!= n){
+double randnum =Math.random();
+if(randnum >=0.5){
 System.out.println("head");
+headcount=headcount+1;
+}else{
+System.out.println("tails");
+ headcount= 0;
+}
+
+counflip=counflip+1;
 }
 return counflip;
+}
 }
 
 //--------------------------------------------------------------------------------------------------
