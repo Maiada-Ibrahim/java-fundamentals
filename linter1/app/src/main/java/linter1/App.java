@@ -3,12 +3,45 @@
  */
 package linter1;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+
+        System.out.println(checksemicolon("C:\\Users\\STUDENT\\project\\java-fundamentals\\linter\\resources\\gates.js"));
+    }
+    public static String checksemicolon(String path) {
+        int numline=0;
+        String error = "";
+        Path mylistpath = Paths.get(path);
+        try {
+            List <String> filelist =Files.readAllLines(mylistpath);
+            for ( String line : filelist ){
+                numline=numline+1;
+                if(!line.isEmpty() ){
+                    if (!(line.contains("{") || line.contains("}") ||line.contains("if") ||line.contains("else") || line.contains(";"))){
+                        error += "Line " + numline + ": Missing semicolon.\n" ;
+                    }
+//             error="no error";
+
+                }
+            }
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        return error;
     }
 }
