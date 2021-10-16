@@ -24,20 +24,20 @@ public class Library {
                 {65, 56, 55, 52, 55, 62, 57}
         };
         System.out.println(Arrays.toString(avarageoftwoarray(weeklyMonthTemperatures)));
-        // lab2 first
-        System.out.println(weather(weeklyMonthTemperatures));
-        //lab2 sec
-        List<String> votes = new ArrayList<>();
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Bush");
-        votes.add("Shrub");
-        votes.add("Hedge");
-        votes.add("Shrub");
-        votes.add("Bush");
-        votes.add("Hedge");
-        votes.add("Bush");
-        System.out.println("winner is " + tally(votes));
+        // lab3 first
+//        System.out.println(weather(weeklyMonthTemperatures));
+        //lab3 sec
+//        List<String> votes = new ArrayList<>();
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Bush");
+//        votes.add("Shrub");
+//        votes.add("Hedge");
+//        votes.add("Shrub");
+//        votes.add("Bush");
+//        votes.add("Hedge");
+//        votes.add("Bush");
+//        System.out.println("winner is " + tally(votes));
     }
 
     public static ArrayList<Integer> roll(int n) {
@@ -79,7 +79,7 @@ public class Library {
             sum = sum + avrgarray[i];
         }
         average = sum / avrgarray.length;
-        System.out.println(sum);
+//        System.out.println(sum);
         return average;
     }
 
@@ -95,7 +95,7 @@ public class Library {
         }
         lowestavarage = sum / array[0].length;
 
-        System.out.println(lowestavarage);
+//        System.out.println(lowestavarage);
 
 
         for (int i = 0; i < array.length; i++) {
@@ -104,7 +104,7 @@ public class Library {
                 countlengh = countlengh + 1;
             }
             avg = sum / countlengh;
-            System.out.println(avg);
+//            System.out.println(avg);
             if (avg < lowestavarage) {
                 lowestavarage = avg;
                 indexforlowestavg = i;
@@ -115,68 +115,68 @@ public class Library {
 
         }
 
-        System.out.println(indexforlowestavg);
+//        System.out.println(indexforlowestavg);
 
         return array[indexforlowestavg];
     }
 
-    public static String weather(int[][] array) {
-        HashSet<Integer> weatherlist = new HashSet<Integer>();
-        int max = 0;
-        int min = array[0][0];
-        String output = "";
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                int x = array[i][j];
-                weatherlist.add(array[i][j]);
-//                weatherlist.add(9);
-                if (array[i][j] > max) {
-                    max = array[i][j];
-                } else if (array[i][j] < min) {
-                    min = array[i][j];
-                }
-            }
-        }
-        System.out.println("High:" + max);
-        System.out.println("Low:" + min);
-        for (int i = min; i <= max; i++) {
+//    public static String weather(int[][] array) {
+//        HashSet<Integer> weatherlist = new HashSet<Integer>();
+//        int max = 0;
+//        int min = array[0][0];
+//        String output = "";
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[i].length; j++) {
+//                int x = array[i][j];
+//                weatherlist.add(array[i][j]);
+////                weatherlist.add(9);
+//                if (array[i][j] > max) {
+//                    max = array[i][j];
+//                } else if (array[i][j] < min) {
+//                    min = array[i][j];
+//                }
+//            }
+//        }
+//        System.out.println("High:" + max);
+//        System.out.println("Low:" + min);
+//        for (int i = min; i <= max; i++) {
+//
+//
+//            if (!weatherlist.contains(i)) {
+//                output += "\nNever saw temperature : " + i;
+////                    break;
+//            }
+//
+//
+//        }
+//        return output;
+//    }
 
-
-            if (!weatherlist.contains(i)) {
-                output += "\nNever saw temperature : " + i;
-//                    break;
-            }
-
-
-        }
-        return output;
-    }
-
-    public static String tally(List<String> votes) {
-        HashMap<String, Integer> listvote = new HashMap<String, Integer>();
-        int vote = 0;
-        for (String thename : votes) {
-            if (listvote.containsKey(thename)) {
-
-                vote = listvote.get(thename) + 1;
-                listvote.put(thename , vote);
-            }else {
-                listvote.put(thename,1);
-            }
-
-
-        }
-        System.out.println(listvote);
-        int max=0;
-        String winner="";
-        for(Map.Entry<String , Integer> entry : listvote.entrySet()){
-            if (entry.getValue()>max){
-                max=entry.getValue();
-                winner=entry.getKey();
-
-            }
-        }
-        return winner;
-    }
+//    public static String tally(List<String> votes) {
+//        HashMap<String, Integer> listvote = new HashMap<String, Integer>();
+//        int vote = 0;
+//        for (String thename : votes) {
+//            if (listvote.containsKey(thename)) {
+//
+//                vote = listvote.get(thename) + 1;
+//                listvote.put(thename , vote);
+//            }else {
+//                listvote.put(thename,1);
+//            }
+//
+//
+//        }
+//        System.out.println(listvote);
+//        int max=0;
+//        String winner="";
+//        for(Map.Entry<String , Integer> entry : listvote.entrySet()){
+//            if (entry.getValue()>max){
+//                max=entry.getValue();
+//                winner=entry.getKey();
+//
+//            }
+//        }
+//        return winner;
+//    }
 
 }
