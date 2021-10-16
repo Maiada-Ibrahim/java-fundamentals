@@ -3,12 +3,24 @@
  */
 package test;
 
+import java.util.Arrays;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    public static void main(String[] args) {
+        System.out.println("input:");
+        Integer[] array = {1,2,3};
+        System.out.print(Arrays.toString(reverseArray(array)));
+    }
+    public static Integer[] reverseArray (Integer[] array) {
+        Integer[] newarray=new Integer[array.length];
+        int j=0;
+        for (int i=array.length-1;i>=0;i--){
+            newarray[j]=array[i];
+         j++;
+        }
+        System.out.print(Arrays.toString(array));
+        System.out.println("\n onput:");
+        return newarray;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
 }
