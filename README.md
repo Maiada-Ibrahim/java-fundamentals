@@ -29,7 +29,7 @@ Actual time needed to complete: 3.5 hour
 
 
 # lab-02 
-## [basiclibrary](https://github.com/Maiada-Ibrahim/java-fundamentals/blob/main/basiclibrary3/app/src/main/java/basiclibrary3/App.java)
+## [basiclibrary](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/basiclibrary1)
 it's contain these method
 1. roll for Roll Dice
 2. duplicates for Contains Duplicates
@@ -47,7 +47,7 @@ Actual time needed to complete: 6.5 hour
 # lab-03 
 we add for the basiclibtary 
 
- ## [Maps](https://github.com/Maiada-Ibrahim/java-fundamentals/blob/main/basiclibrary3/app/src/main/java/basiclibrary3/App.java)
+ ## [Maps](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/basiclibrary1)
 1. Analyzing Weather Data:
 
 find the min and max values. Use a HashSet of type Integer to keep track of all the unique temperatures seen. Finally, iterate from the min temp to the max temp and create a String containing any temperature not seen during the month. Return that String.
