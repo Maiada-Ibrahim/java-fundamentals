@@ -28,7 +28,8 @@ Actual time needed to complete: 3.5 hour
 
 
 
-# lab-02 code [basiclibrary](https://github.com/Maiada-Ibrahim/java-fundamentals/blob/main/basiclibrary3/app/src/main/java/basiclibrary3/App.java)
+# lab-02 
+## [basiclibrary](https://github.com/Maiada-Ibrahim/java-fundamentals/blob/main/basiclibrary3/app/src/main/java/basiclibrary3/App.java)
 it's contain these method
 1. roll for Roll Dice
 2. duplicates for Contains Duplicates
@@ -42,3 +43,38 @@ Start time: 1:30 pm
 Finish time: 7 pm
 
 Actual time needed to complete: 6.5 hour
+
+# lab-03 
+we add for the basiclibtary 
+
+ ## [Maps](https://github.com/Maiada-Ibrahim/java-fundamentals/blob/main/basiclibrary3/app/src/main/java/basiclibrary3/App.java)
+1. Analyzing Weather Data:
+
+find the min and max values. Use a HashSet of type Integer to keep track of all the unique temperatures seen. Finally, iterate from the min temp to the max temp and create a String containing any temperature not seen during the month. Return that String.
+
+the user insert array of temperatures and this function return 
+High: 72
+Low: 51
+Never saw temperature: 63
+Never saw temperature: 67
+Never saw temperature: 68
+Never saw temperature: 69
+
+
+2. Tallying Election:
+
+Write a function called tally that accepts a List of Strings representing votes and returns one string to show what got the most votes.
+
+
+ ## [File I/O, and Testing](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/linter)
+
+
+Estimate of time needed to complete:2 hour
+
+Start time: on wednesday  1:30 pm  ,  on saturday  9:30am 
+
+Finish time: on wednesday   7 pm  ,   on saturday  12:30am 
+
+Actual time needed to complete: 9.5 hour
+
+that because I try to use stream.
