@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 
 public class Restaurant {
-    String name;
-    double stars ;
-    double price;
+   private   String name;
+   private double stars ;
+   private double price;
 
     public Restaurant(String name, double stars, double price) {
         this.name = name;
@@ -17,7 +17,7 @@ public class Restaurant {
             this.stars=stars;
         }
     }
-    ArrayList<Review> reviewlist = new ArrayList<Review>();
+  private   ArrayList<Review> reviewlist = new ArrayList<Review>();
     public  void addReview  (Review review) {
         reviewlist.add(review);
         startafterreviwe();
