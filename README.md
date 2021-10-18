@@ -78,3 +78,20 @@ Finish time: on wednesday   7 pm  ,   on saturday  12:30am
 Actual time needed to complete: 9.5 hour
 
 that because I try to use stream.
+
+
+# lab-04
+ ## [inheritance](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/inheritance)
+ reate a class to represent a Restaurant. Each Restaurant should have a name, a number of stars betweeen 0 and 5, and a price category (i.e. number of dollar signs).
+ with list of reviwe for each Restaurant
+
+Estimate of time needed to complete:5 hour
+
+Start time: on wednesday  1:30 pm  
+
+Finish time: on wednesday   5:50 pm  
+
+Actual time needed to complete: 4 hour
+
+
+
