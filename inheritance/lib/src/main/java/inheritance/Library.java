@@ -7,15 +7,24 @@ import java.util.Arrays;
 
 public class Library {
     public static void main(String[] args) {
-        Restaurant mac = new Restaurant("mac", 4, 5.5);
+//        Restaurant mac = new Restaurant("mac", 4, 5.5);
 //        System.out.println(mac.toString());
 
         Review review= new Review("GOOD", "Maicle", 4);
 //        System.out.println(review.toString());
 //        Review review2= new Review("bad", "tala", 5);
 //        System.out.println(review2.toString());
-        mac.addReview(review);
+//        mac.addReview(review);
 //        mac.addReview(review2);
-        System.out.println(mac.toString());
+//        System.out.println(mac.toString());
+//          Shop lafamilia =new Shop("lafamilia","good chose foor kids",20);
+//                System.out.println(lafamilia.toString());
+Place place=new Restaurant("mac", 4, 5.5);
+                place.addReview(review);
+                System.out.println(place.toString());
+
+
+
+
     }
 }
