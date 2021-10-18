@@ -11,8 +11,9 @@ public class Restaurant {
     public Restaurant(String name, double stars, double price) {
         this.name = name;
         this.price = price;
-        if(stars<0|| stars>5 ){
+        if(stars<0|| stars>5 ) {
             this.stars = 0;
+        
         }else{
             this.stars=stars;
         }
@@ -34,9 +35,9 @@ public class Restaurant {
     public  String toString (){
 //        ArrayList<Review> reviewlist2 = new ArrayList<Review>();
         if (reviewlist.isEmpty()){
-     return    ("Restaurant name is " +name+ " with start "+ stars +",his price "+ price);
+     return    ("Restaurant name is " +name+ " with start "+ stars +",his price "+ price+"$");
         }else {
-            return    ("Restaurant name is " +name+ " with start "+ stars +",his price "+ price + reviewlist   );
+            return    ("Restaurant name is " +name+ " with start "+ stars +",his price "+ price +"$"+ reviewlist   );
         }
 }
 }
