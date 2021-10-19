@@ -7,25 +7,64 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void RestTest() {
-        Restaurant TestRest = new Restaurant("mac", 4, 5.5);
-        String correctresulte= TestRest.toString();
-        String expect = "Restaurant name is mac with start 4.0,his price 5.5$";
-        assertEquals (expect, correctresulte);
+//    @Test void RestTest() {
+//        Restaurant TestRest = new Restaurant("mac", 4, 5.5);
+//        String correctresulte= TestRest.toString();
+//        String expect = "Restaurant name is mac with start 4.0,his price 5.5$";
+//        assertEquals (expect, correctresulte);
+//    }
+//    @Test void RevTest() {
+//        Review TestRev = new Review("GOOD", "Maicle", 4);
+//        String correctresulte= TestRev.toString();
+//        String expect = "Review body is GOOD his author Maicle with start 4";
+//        assertEquals (expect, correctresulte);
+//    }
+//    @Test void RestTestAfterAdd() {
+//        Restaurant RestTestAfterAdd = new Restaurant("mac", 4, 5.5);
+//        Review review= new Review("GOOD", "Maicle", 4);
+//        RestTestAfterAdd.addReview(review);
+//        String correctresulte= RestTestAfterAdd.toString();
+//        String expect = "Restaurant name is mac with start 4.0,his price 5.5$[Review body is GOOD his author Maicle with start 4]";
+//        assertEquals (expect, correctresulte);
+//    }
+     @Test void ShopTest() {
+         Shop testShop = new Shop("lafamilia",30,20,"GOOD");
+         String correctresulte = testShop.toString();
+         String expect = "Shop{name='lafamilia', description='GOOD', dollar=30.0$}";
+         assertEquals(expect, correctresulte);
+     }
+    @Test void revTest() {
+        Review review = new Review("GOOD", "Maicle", 4);
+        Review review2 = new Review("bad", "tala", "goooog", 5);
+        Restaurant testRevRest = new Restaurant("mac", 4, 5.5);
+        testRevRest.addReview(review);
+        String correctresulte = testRevRest.toString();
+        String expect = "Restaurant name is mac with start 5.5,his price 4.0$[Review body is GOOD his author Maicle with start 4]";
+        assertEquals(expect, correctresulte);
+        Shop testShopRev = new Shop("lafamilia", 30, 20, "GOOD");
+        testShopRev.addReview(review2);
+        String correctresulte2 = testShopRev.toString();
+        String expect2 = "Shop{name='lafamilia', description='GOOD', dollar=30.0$}[Review body is bad his author tala with start 5]";
+        assertEquals(expect2, correctresulte2);
     }
-    @Test void RevTest() {
-        Review TestRev = new Review("GOOD", "Maicle", 4);
-        String correctresulte= TestRev.toString();
-        String expect = "Review body is GOOD his author Maicle with start 4";
-        assertEquals (expect, correctresulte);
-    }
-    @Test void RestTestAfterAdd() {
-        Restaurant RestTestAfterAdd = new Restaurant("mac", 4, 5.5);
-        Review review= new Review("GOOD", "Maicle", 4);
-        RestTestAfterAdd.addReview(review);
-        String correctresulte= RestTestAfterAdd.toString();
-        String expect = "Restaurant name is mac with start 4.0,his price 5.5$[Review body is GOOD his author Maicle with start 4]";
-        assertEquals (expect, correctresulte);
+        @Test void TheaterTest() {
+            Theater  testTheater  = new Theater ("city mall",30,5);
+            Review review3= new Review("bad", "tala", 5);
+            testTheater.addReview(review3);
+            testTheater.addMovie("Game of throne");
+            String correctresulte = testTheater.toString();
+            String expect = "Theater name is city mall with start 5.0,his price 30.0$The movies is shown know [Game of throne][Review body is bad his author tala with start 5]";
+            assertEquals(expect, correctresulte);
+        }
+    @Test void TheaterTest2() {
+        Theater  testTheater  = new Theater ("city mall",30,5);
+        Review review3= new Review("bad", "tala",5,"Game of throne");
+        testTheater.addReview(review3);
+        testTheater.addMovie("Game of throne");
+        String correctresulte = testTheater.toString();
+        String expect = "Theater name is city mall with start 5.0,his price 30.0$The movies is shown know [Game of throne][Review body is bad his author tala with start 5i watchedGame of throne]";
+        assertEquals(expect, correctresulte);
     }
 
-}
+    }
+

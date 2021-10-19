@@ -1,29 +1,33 @@
 package inheritance;
 
 public class Shop extends Place {
+    private String description;
 
-
-    public Shop(String name,  double price) {
-        super(name, price);
-
+    public Shop(String name, double price, double stars, String description) {
+        super(name, price, stars);
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "Shop{" +
-                "name='" + getName() + '\'' +
-                ", description='" + getDescription() + '\'' +
-                ", dollar=" + getDollar() +
-                '}';
+        if (getReviewlist().isEmpty()) {
+            return "Shop{" +
+                    "name='" + getName() + '\'' +
+                    ", description='" + this.description + '\'' +
+                    ", dollar=" + getPrice() +
+                    "$}";
+        } else {
+            return "Shop{" +
+                    "name='" + getName() + '\'' +
+                    ", description='" + this.description + '\'' +
+                    ", dollar=" + getPrice() +
+                    "$}" + getReviewlist();
+
+
+        }
+
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getDescription() {
         return description;
@@ -31,13 +35,5 @@ public class Shop extends Place {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public double getDollar() {
-        return dollar;
-    }
-
-    public void setDollar(double dollar) {
-        this.dollar = dollar;
     }
 }
