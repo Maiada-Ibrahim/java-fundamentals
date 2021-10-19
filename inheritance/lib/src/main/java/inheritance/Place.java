@@ -16,10 +16,10 @@ public abstract class Place {
 
     public  void addReview  (Review review) {
         reviewlist.add(review);
-        startafterreviwe();
+        startAfterReviwe();
 
     }
-    public  void startafterreviwe  () {
+    public  void startAfterReviwe  () {
         double sum=0;
         double avarage=0.0;
         for (int i=0; i<reviewlist.size();i++){
