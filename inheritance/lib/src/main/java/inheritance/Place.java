@@ -6,25 +6,25 @@ public abstract class Place {
    private   String name ;
    private double price;
    private double stars;
-   private ArrayList<Review> reviewlist = new ArrayList<Review>();
+   private ArrayList<Review> reviewList = new ArrayList<Review>();
 
     public Place(String name, double price, double stars) {
         this.name = name;
         this.price = price;
-        this.stars = stars;
+        this.stars = 0;
     }
 
     public  void addReview  (Review review) {
-        reviewlist.add(review);
+        reviewList.add(review);
         startAfterReviwe();
 
     }
     public  void startAfterReviwe  () {
         double sum=0;
         double avarage=0.0;
-        for (int i=0; i<reviewlist.size();i++){
-            sum =sum+reviewlist.get(i).getStars();
-            avarage =sum/reviewlist.size();}
+        for (int i=0; i<reviewList.size();i++){
+            sum =sum+reviewList.get(i).getStars();
+            avarage =sum/reviewList.size();}
 
         this.stars=avarage;
     }
@@ -54,14 +54,12 @@ public abstract class Place {
     }
 
     public ArrayList<Review> getReviewlist() {
-        return reviewlist;
+        return reviewList;
     }
 
-    public void setReviewlist(ArrayList<Review> reviewlist) {
-        this.reviewlist = reviewlist;
+    public void setReviewList(ArrayList<Review> reviewlist) {
+        this.reviewList = reviewlist;
     }
-//public void choose(Place ch){
-//    ch.toString();
-//}
+
 
 }

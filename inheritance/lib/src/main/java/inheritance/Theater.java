@@ -3,7 +3,7 @@ package inheritance;
 import java.util.ArrayList;
 
 public class Theater extends Place {
-    private ArrayList<String> allmovies = new ArrayList<String>();
+    private ArrayList<String> allMovies = new ArrayList<String>();
     private String nameMovie;
 
 
@@ -18,11 +18,11 @@ public class Theater extends Place {
     }
 
     public ArrayList<String> getAllmovies() {
-        return allmovies;
+        return allMovies;
     }
 
     public void setAllmovies(ArrayList<String> allmovies) {
-        this.allmovies = allmovies;
+        this.allMovies = allmovies;
     }
 
     public String getNameMovie() {
@@ -34,18 +34,18 @@ public class Theater extends Place {
     }
 
     public void addMovie(String newMovie) {
-        allmovies.add(newMovie);
+        allMovies.add(newMovie);
     }
 
     public void removeMovie(String newMovie) {
-        allmovies.remove(newMovie);
+        allMovies.remove(newMovie);
     }
 
     public String toString() {
         if (getReviewlist().isEmpty()  ) {
-            return ("Theater name is " + getName() + " with start " + getStars() + ",his price " + getPrice() + "$"+"The movies is shown know "+allmovies);
+            return ("Theater name is " + getName() + " with start " + getStars() + ",his price " + getPrice() + "$"+"The movies is shown know "+allMovies);
         } else {
-            return ("Theater name is " + getName() + " with start " + getStars() + ",his price " + getPrice() + "$"+"The movies is shown know "+allmovies+ getReviewlist());
+            return ("Theater name is " + getName() + " with start " + getStars() + ",his price " + getPrice() + "$"+"The movies is shown know "+allMovies+ getReviewlist());
         }
     }
 
