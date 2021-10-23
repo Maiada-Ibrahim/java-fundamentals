@@ -10,7 +10,7 @@ class LibraryTest {
     @Test void RestTest() {
         Restaurant TestRest = new Restaurant("mac", 4, 5.5);
         String correctresulte= TestRest.toString();
-        String expect = "Restaurant name is mac with start 4.0,his price 5.5$";
+        String expect = "Restaurant name is mac with start 0.0,his price 5.5$";
         assertEquals (expect, correctresulte);
     }
     @Test void RevTest() {
