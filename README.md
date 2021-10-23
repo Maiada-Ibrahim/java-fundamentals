@@ -81,7 +81,7 @@ that because I try to use stream.
 
 
 # lab-06
- ## [inheritance](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/inheritance)
+ ## [inheritance](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/inheritancelab6)
  reate a class to represent a Restaurant. Each Restaurant should have a name, a number of stars betweeen 0 and 5, and a price category (i.e. number of dollar signs).
  with list of reviwe for each Restaurant
 
@@ -98,7 +98,7 @@ Actual time needed to complete: 4 hour
 -------------------------------------------------------------------------------------
 Lab: 07 - Inheritance, day 2
  ## [inheritance](https://github.com/Maiada-Ibrahim/java-fundamentals/tree/main/inheritance)
- reate a class to represent  a Place .Inheritance from it Shop,Restaurant,Theater   Each place should have a name, a number of stars betweeen 0 and 5, and a price category (i.e. number of dollar signs).
+ create a class to represent  a Place .Inheritance from it Shop,Restaurant,Theater   Each place should have a name, a number of stars betweeen 0 and 5, and a price category (i.e. number of dollar signs).
  with list of reviwe for each Restaurant
 
 Estimate of time needed to complete:5 hour
