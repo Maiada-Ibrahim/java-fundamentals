@@ -10,7 +10,7 @@ class LibraryTest {
 //    @Test void RestTest() {
 //        Restaurant TestRest = new Restaurant("mac", 4, 5.5);
 //        String correctresulte= TestRest.toString();
-//        String expect = "Restaurant name is mac with start 4.0,his price 5.5$";
+//        String expect = "Restaurant name is mac with start 0.0,his price 5.5$";
 //        assertEquals (expect, correctresulte);
 //    }
 //    @Test void RevTest() {
@@ -39,7 +39,7 @@ class LibraryTest {
         Restaurant testRevRest = new Restaurant("mac", 4, 5.5);
         testRevRest.addReview(review);
         String correctresulte = testRevRest.toString();
-        String expect = "Restaurant name is mac with start 5.5,his price 4.0$[Review body is GOOD his author Maicle with start 4]";
+        String expect = "Restaurant name is mac with start 4.0,his price 4.0$[Review body is GOOD his author Maicle with start 4]";
         assertEquals(expect, correctresulte);
         Shop testShopRev = new Shop("lafamilia", 30, 20, "GOOD");
         testShopRev.addReview(review2);
